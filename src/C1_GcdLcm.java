@@ -17,11 +17,11 @@ public class C1_GcdLcm {
         int a = scan.nextInt();
         int b = scan.nextInt();
 
-        System.out.println(gcm(a, b));
+        System.out.println(gcd(a, b));
         System.out.println(lcm(a,b));
     }
 
-    public static int gcm(int a, int b) {
+    public static int gcd(int a, int b) {
         if (a < b) {
             int temp = a;
             a = b;
@@ -30,11 +30,11 @@ public class C1_GcdLcm {
         if (a % b == 0)
             return b;
         else
-            return gcm(b, a % b);
+            return gcd(b, a % b);
     }
 
     public static int lcm(int a, int b) {
-        return a * b / gcm(a, b);
+        return a * b / gcd(a, b);
     }
 
 }

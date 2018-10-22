@@ -12,8 +12,11 @@ public class Tobin {
 	}
 	
 	public static void printBinary(int n, int k) {
-		if (n==k) {
+		if (n<k) {
 			return;
+		}
+		for (int i=0; i<n; i++) {
+			
 		}
 		printBinary(n-1, k);
 	}
